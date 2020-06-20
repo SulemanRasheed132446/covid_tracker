@@ -13,7 +13,7 @@ export const SearchBar = () => {
         <div className='search-bar'>
             <input type="text" placeholder="Enter country name" value={searchText} onChange={handleSearchText}></input>
             <div className="search-btn">
-                <img src={navIcon}></img>
+                <img src={navIcon} alt="search_icon"></img>
             </div>
         </div>
     )

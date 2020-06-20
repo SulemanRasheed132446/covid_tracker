@@ -15,7 +15,7 @@ export const StatsBox = () => {
         <div className='stats-box'>
             <div className="stats">
                 <div className="stats-image">
-                <img src={statsPng} />
+                <img src={statsPng} alt="country"/>
                 </div>
                 <div className="stats-info">
                     <p>Stats Overview</p>
@@ -24,7 +24,7 @@ export const StatsBox = () => {
             </div>
             <div className="stats">
                 <div className="stats-image">
-                <img src={infectedPng} />
+                <img src={infectedPng} alt="infected logo"/>
                 </div>
                 <div className="stats-info">
                     <p>Total Coronavirus Cases</p>
@@ -37,7 +37,7 @@ export const StatsBox = () => {
             </div>
             <div className="stats">
                 <div className="stats-image">
-                <img src={recoveredPng} />
+                <img src={recoveredPng} alt="recovered logo"/>
                 </div>
                 <div className="stats-info">
                     <p>Total Recovered</p>
@@ -50,7 +50,7 @@ export const StatsBox = () => {
             </div>
             <div className="stats">
                 <div className="stats-image">
-                <img src={deathsPng} />
+                <img src={deathsPng} alt="death logo"/>
                 </div>
                 <div className="stats-info">
                     <p>Total Death</p>
