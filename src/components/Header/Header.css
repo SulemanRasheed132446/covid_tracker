@@ -1,0 +1,63 @@
+.header {
+    background-color: #262C7C;
+    padding: 1% 10%;
+    background-image: url('../../assets/backgound.png');
+}
+hr{
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.container div{
+    width:40%;
+}
+@media only screen and (max-width:860px) {
+    .container img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:520px) {
+    .container div{
+        width:80%
+    }
+    .container img {
+        display: none;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro h1 {
+    color:white;
+}
+.intro p{
+    color:#BEC1E0;
+    font-size: 20px;
+    line-height: 1.5;
+    word-spacing: 2;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    50%{ transform: rotate(10deg)}
+   100% {transform: rotate(0deg);}
+
+  }
+
+
+.container img {
+    width:40%;
+    animation: rotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}

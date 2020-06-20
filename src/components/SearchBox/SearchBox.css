@@ -1,0 +1,23 @@
+.search-box {
+    box-sizing: border-box;
+    width:25%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 36px 23px;
+    box-shadow: 1px 1px   black -1px -1px black;
+    height:700px;
+}
+
+@media only screen and (max-width:1300px) {
+    .search-box{
+        margin-top: 50px;
+        width: 100%;
+        height:400px;
+    }
+}
+.countries-data {
+    overflow: auto;
+    height:90%;
+
+
+}

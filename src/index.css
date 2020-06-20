@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-family: 'Odibee Sans', cursive;
+  background-color: #F2F3F7;
 }
 
 code {

@@ -1,0 +1,27 @@
+.country-box {
+    margin-top: 10px;
+    background-color: #f2f3f7d2;
+    border: none;
+    border-radius: 15px;
+    justify-content: space-between;
+    transition: all 300ms ease-in;
+}
+
+.country-box:hover{
+    background-color: #a4a4a560;
+  
+}
+
+.country-img {
+    border-radius: 100%;
+    height:30px
+}
+.country {
+    display: flex;
+    align-items: center;
+}
+
+.country-box  p {
+    color: #6468A1;
+    padding-left:20px;
+}
