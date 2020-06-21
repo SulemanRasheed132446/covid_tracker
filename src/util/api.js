@@ -24,7 +24,10 @@ export const covidApi = {
                         name:'Global',
                         infected:json.Global.TotalConfirmed,
                         recovered:json.Global.TotalRecovered,
-                        deaths:json.Global.TotalDeaths
+                        deaths:json.Global.TotalDeaths,
+                        newInfected: json.Global.NewConfirmed,
+                        newDeaths:json.Global.NewDeaths,
+                        newRecovered:json.Global.NewRecovered
                     };
                 }
                 const countries = json.Countries;
@@ -36,7 +39,10 @@ export const covidApi = {
                             name,
                             infected:targetCountry.TotalConfirmed,
                             recovered:targetCountry.TotalRecovered,
-                            deaths:targetCountry.TotalDeaths
+                            deaths:targetCountry.TotalDeaths,
+                            newInfected: targetCountry.NewConfirmed,
+                            newDeaths:targetCountry.NewDeaths,
+                            newRecovered:targetCountry.NewRecovered
                         }
                     }
                 }

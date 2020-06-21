@@ -10,7 +10,7 @@ import {CovidTrackerContext} from '../../context/CovidTrackerProvider';
 export const StatsBox = () => {
 
     const {data} = useContext(CovidTrackerContext);
-    const {recovered,deaths,infected, name}  = data;
+    const {recovered,deaths,infected, name, newDeaths , newRecovered, newInfected}  = data;
     return (
         <div className='stats-box'>
             <div className="stats">
@@ -30,9 +30,14 @@ export const StatsBox = () => {
                     <p>Total Coronavirus Cases</p>
                     <h1>
                         <CountUp 
-                        start={0} end={infected | 0} 
+                        start={0} end={(infected ? infected-newInfected: undefined) | 0} 
                         duration={2.5}/>
                     </h1>
+                    <p>+
+                    <CountUp 
+                        start={0} end={newInfected | 0} 
+                        duration={2.5}/>
+                    </p>
                 </div>
             </div>
             <div className="stats">
@@ -43,9 +48,15 @@ export const StatsBox = () => {
                     <p>Total Recovered</p>
                     <h1>
                         <CountUp 
-                        start={0} end={recovered | 0} 
+                        start={0} end={(recovered ? recovered-newRecovered: undefined) | 0} 
                         duration={2.5}/>
-                        </h1>
+                    </h1>
+                    <p>
+                        + <CountUp 
+                        start={0} end={newRecovered | 0} 
+                        duration={2.5}/>
+                    </p>
+
                 </div>
             </div>
             <div className="stats">
@@ -54,10 +65,18 @@ export const StatsBox = () => {
                 </div>
                 <div className="stats-info">
                     <p>Total Death</p>
-                    <h1><CountUp 
-                        start={0} end={deaths| 0} 
-                        duration={2.5}/>
-                        </h1>
+                    <h1>
+                        <CountUp 
+                        start={0} end={(deaths ? deaths - newDeaths : undefined)| 0} 
+                        duration={2.5}
+                        />
+                    </h1>
+                    <p>+
+                        <CountUp 
+                            start={0} end={newDeaths| 0} 
+                            duration={2.5}
+                        />
+                    </p>
                 </div>
             </div>
         </div>
