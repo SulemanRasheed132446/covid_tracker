@@ -18,7 +18,6 @@ export const CovidTrackerProvider = (props) => {
 
     const getCountryData = async (country) => {
         setData(await covidApi.getCountryData(country) || data);
-        console.log(data);
     }
     return (
         <CovidTrackerContext.Provider value={{
